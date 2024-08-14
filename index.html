@@ -100,7 +100,11 @@
         <div id="responseMessage"></div>
         <div id="feedbackForm">
             <form id="sheetdb-form" action="https://sheetdb.io/api/v1/tael4nuf36mb9" method="POST">
-                Can we know your name? <input type="text" name="data[Customer-name]" required>
+                Name: <input type="text" name="data[Customer-name]" required>
+                <br>
+                What services did you get with us?
+                <br>
+
                 <label>
                     <input type="checkbox" name="data[Pedicure]" value="x">
                     Pedicure
@@ -128,7 +132,7 @@
                 <label>
                     <input type="checkbox" name="data[EyeLash]" value="x">
                     Eye Lash
-                </label><br>
+                </label><br> <br>
                 Feedback: <textarea name="data[Feedback]" placeholder="Please provide your feedback here..." required></textarea>
                 <input type="hidden" name="data[Date]" id="currentDate">
                 <input type="hidden" name="data[Rating]" id="RatingStar">
