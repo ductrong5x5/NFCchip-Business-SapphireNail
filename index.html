@@ -8,15 +8,17 @@
         body {
             font-family: Arial, sans-serif;
             display: flex;
-            justify-content: center;
+            flex-direction: column; /* Stack elements vertically */
             align-items: center;
             height: 100vh;
             margin: 0;
-            /* background-color: #f4f4f4; */
-            /* img: url('hell/background.png'); /* Replace with your image URL */
-            /* background-size: ; Ensures the image covers the whole background */
-            /* background-position: top; Centers the background image */
-            /* background-repeat: no-repeat; Prevents the background image from repeating */ */
+            padding: 0;
+            background-color: #f4f4f4; /* Background color */
+        }
+        img {
+            max-width: 100%; /* Make sure the image is responsive */
+            height: auto;
+            margin-top: 20px; /* Add margin to the top of the image */
         }
         .container {
             text-align: center;
@@ -26,6 +28,7 @@
             border-radius: 10px;
             max-width: 500px; /* Limit max width */
             width: 100%;
+            margin-top: 20px; /* Ensure there's space between the image and container */
         }
         h1 {
             color: #333;
@@ -50,7 +53,7 @@
         }
         #feedbackForm {
             display: none;
-            margin-top: 1px;
+            margin-top: 10px;
         }
         textarea {
             width: 100%;
@@ -79,20 +82,10 @@
         button:hover {
             background-color: #45a049;
         }
-        .header {
-            text-align: center;
-            padding: 10px;
-        }
-        .header img {
-            max-width: 100%;
-            height: auto;
-        }
     </style>
 </head>
 <body>
-    <div class="header">
-        <img src="logo.png" alt="Logo">
-    </div>
+    <img src="logo.png" alt="Logo">
     <div class="container">
         <h1>How would you rate our service?</h1>
         <div class="stars">
@@ -105,8 +98,7 @@
         <div id="responseMessage"></div>
         <div id="feedbackForm">
             <form id="sheetdb-form" action="https://sheetdb.io/api/v1/tael4nuf36mb9" method="POST">
-                
-                Can we know your name? <input type="text" name="data[Customer-name]" required >
+                Can we know your name? <input type="text" name="data[Customer-name]" required>
                 <label>
                     <input type="checkbox" name="data[Pedicure]" value="x">
                     Pedicure
@@ -172,14 +164,14 @@
             const messageDiv = document.getElementById('responseMessage');
             if (rating == 5) {
                 window.location.href = "https://g.page/r/CUESaHvwEEi_EAI/review"; // Redirect to Google review page
-            } else if (rating <=3) {
+            } else if (rating <= 3) {
                 messageDiv.innerHTML = "We're sorry our service didn't meet your expectations. Please tell us your experience below so we can improve.";
                 feedbackForm.style.display = 'block';
-            } else 
+            } else {
                 messageDiv.innerHTML = "Thank you for giving us feedback. We will make your next experience perfect with us.";
                 feedbackForm.style.display = 'block';
+            }
             document.getElementById('RatingStar').value = rating;
-
         }
 
         // Function to handle feedback form submission
@@ -200,11 +192,10 @@
                 alert('There was an error submitting your feedback. Please check the console for more details.');
             });
         });
-    
+
         // Automatically set the current date in the hidden input field
         const today = new Date().toLocaleString();
         document.getElementById('currentDate').value = today;
-        
     </script>
 </body>
 </html>
