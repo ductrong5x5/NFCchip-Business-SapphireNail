@@ -100,7 +100,7 @@
         <div id="responseMessage"></div>
         <div id="feedbackForm">
             <form id="sheetdb-form" action="https://sheetdb.io/api/v1/tael4nuf36mb9" method="POST">
-                Name: <input type="text" name="data[Customer-name]" required>
+                Name: <input type="text" name="data[Customer-name]" id="customerName" required>
                 <br>
                 What services did you get with us?
                 <br>
@@ -184,12 +184,13 @@
         var form = document.getElementById('sheetdb-form');
         form.addEventListener("submit", e => {
             e.preventDefault();
+            const customerName = document.getElementById('customerName').value;
             fetch(form.action, {
                 method: "POST",
                 body: new FormData(form),
             }).then(response => response.json())
             .then(result => {
-                alert('Thank you for your feedback! Have a good day!');
+                alert('Thank you for your feedback, ' + customerName +'! Have a good day!');
                 form.reset();
                 feedbackForm.style.display = 'none';
             })
