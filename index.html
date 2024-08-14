@@ -169,7 +169,10 @@
         function handleRating(rating) {
             const messageDiv = document.getElementById('responseMessage');
             if (rating == 5) {
+                alert('Thank you for giving us a 5-stars feedback! We are appreciate if you can give us a Google review');
+                
                 window.location.href = "https://g.page/r/CUESaHvwEEi_EAI/review"; // Redirect to Google review page
+                
             } else if (rating <= 3) {
                 messageDiv.innerHTML = "We're sorry our service didn't meet your expectations. Please tell us your experience below so we can improve.";
                 feedbackForm.style.display = 'block';
