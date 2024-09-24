@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/NFCchip-Business-SapphireNail/static/css/main.5f328235.css",
-    "main.js": "/NFCchip-Business-SapphireNail/static/js/main.9d17bd0c.js",
+    "main.js": "/NFCchip-Business-SapphireNail/static/js/main.cab832e3.js",
     "static/js/453.2752e4c4.chunk.js": "/NFCchip-Business-SapphireNail/static/js/453.2752e4c4.chunk.js",
     "static/media/logo.png": "/NFCchip-Business-SapphireNail/static/media/logo.7218286a442bbf7e43b4.png",
     "static/media/reviews.csv": "/NFCchip-Business-SapphireNail/static/media/reviews.fc8835415161f3d69653.csv",
     "index.html": "/NFCchip-Business-SapphireNail/index.html",
     "main.5f328235.css.map": "/NFCchip-Business-SapphireNail/static/css/main.5f328235.css.map",
-    "main.9d17bd0c.js.map": "/NFCchip-Business-SapphireNail/static/js/main.9d17bd0c.js.map",
+    "main.cab832e3.js.map": "/NFCchip-Business-SapphireNail/static/js/main.cab832e3.js.map",
     "453.2752e4c4.chunk.js.map": "/NFCchip-Business-SapphireNail/static/js/453.2752e4c4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5f328235.css",
-    "static/js/main.9d17bd0c.js"
+    "static/js/main.cab832e3.js"
   ]
 }
