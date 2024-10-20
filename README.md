@@ -14,6 +14,12 @@
 
 Here're some of the project's best features:
 
+*   Showing logo
+*   Showing good reviews in the past
+*   Ask customer to review
+*   Getting answer
+*   Forward to Google review page
+
   
   
 <h2>💻 Built with</h2>
